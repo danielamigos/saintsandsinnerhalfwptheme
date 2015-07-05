@@ -24,11 +24,14 @@
 }
 /* html element 62.5% font-size for REM use */
 html {
-	font-size:62.5%;
+	/*font-size:62.5%;*/
 }
 body {
-	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	/*font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 	color:#444;
+	background-color: #fbaf3f;	
+	padding-top: 50px;
+	padding-bottom: 20px;
 }
 /* clear */
 .clear:before,
@@ -100,6 +103,16 @@ input:focus {
 /* footer */
 .footer {
 
+}
+
+.left-column
+{
+	/*background-color: dodgerblue;*/
+}
+
+.main-column
+{
+	background-color: #FFFFFF;
 }
 
 /*------------------------------------*\
