@@ -30,7 +30,7 @@ body {
 	/*font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 	color:#444;
 	background-color: #fbaf3f;	
-	padding-top: 50px;
+	padding-top: 37px;
 	padding-bottom: 20px;
 }
 /* clear */
@@ -87,11 +87,85 @@ input:focus {
 }
 /* logo */
 .logo {
-
+	text-align: center;
+	padding-top: 20px;
 }
-.logo-img {
 
+.call-to-action
+{
+	text-align: center;
+	padding-top: 20px;
 }
+
+.call-to-action a
+{  
+	border-width: 3px;
+	border-radius: 16px;
+	border-color: #fec271;
+	background-color: #f89c31;
+	color:#ffffff;
+	padding: 15px 25px;
+	text-transform: uppercase;
+}
+.call-to-action a:hover,
+.call-to-action a:active,
+.call-to-action a:focus,
+.call-to-action a:active:focus,
+.call-to-action a:active:hover
+{  
+	border-width: 3px;
+	border-radius: 16px;
+	border-color: #fec271;
+	background-color: #e6902d;
+	color:#ffffff;
+}
+
+.countdown
+{
+	text-align: center;
+}
+.countdown h2
+{
+  	color: #ffffff;
+  	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.countdown > div
+{
+	display: inline-block;
+	text-align: center;
+	width: 20%;
+}
+.countdown .value
+{
+  	color: #ffffff;
+  	font-size: 28px;
+	line-height: 24px;
+	font-weight: bold;
+}
+.countdown .title
+{
+  	color: #ffffff;
+  	font-size: 10px;
+}
+.social-links
+{
+	text-align: center;
+	vertical-align: middle;
+	margin-top: 20px;
+	color: #ffffff;
+}
+.social-links img
+{
+	transition: all 0.3s ease 0s;
+}
+.social-links img:hover
+{
+  	opacity: 0.50;
+}
+
+
 /* nav */
 .nav {
 
@@ -132,12 +206,13 @@ input:focus {
 \*------------------------------------*/
 
 @font-face {
-	font-family:'Font-Name';
-	src:url('fonts/font-name.eot');
-	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
-		url('fonts/font-name.woff') format('woff'),
-		url('fonts/font-name.ttf') format('truetype'),
-		url('fonts/font-name.svg#font-name') format('svg');
+	font-family: 'Glyphicons Halflings';
+    src: url(fonts/glyphicons-halflings-regular.eot);
+    src: url(fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),
+		 url(fonts/glyphicons-halflings-regular.woff2) format('woff2'),
+		 url(fonts/glyphicons-halflings-regular.woff) format('woff'),
+		 url(fonts/glyphicons-halflings-regular.ttf) format('truetype'),
+		 url(fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg');
     font-weight:normal;
     font-style:normal;
 }
@@ -146,26 +221,46 @@ input:focus {
     RESPONSIVE
 \*------------------------------------*/
 
-@media only screen and (min-width:320px) {
-
-}
+/* Extra Small Devices, Phones */ 
 @media only screen and (min-width:480px) {
 
 }
+
+/* Small Devices, Tablets */
 @media only screen and (min-width:768px) {
-
+	.navbar-nav {
+	    display:table;
+	    width:100%;
+	    margin: 0;
+	}
+	.navbar-nav > li {
+	    display:table-cell;
+	    text-align:center;
+		float: none;
+	}
+	.dropdown:hover .dropdown-menu {
+		display: table;
+	}
+	
+	.dropdown-menu {
+		position: absolute;
+	    width:auto;
+	    margin: 0;
+	}
+	.dropdown-menu > li {
+	    display:table-cell;
+	    text-align:center;
+		float: none;
+	}
 }
-@media only screen and (min-width:1024px) {
 
+/* Medium Devices, Desktops */
+@media only screen and (min-width:992px) {
+	
 }
-@media only screen and (min-width:1140px) {
 
-}
-@media only screen and (min-width:1280px) {
-
-}
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
-	   only screen and (min-resolution:144dpi) {
+/* Large Devices, Wide Screens */
+@media only screen and (min-width:1110px) {
 
 }
 
@@ -316,3 +411,4 @@ a img.aligncenter {
 		page-break-after:avoid;
 	}
 }
+
