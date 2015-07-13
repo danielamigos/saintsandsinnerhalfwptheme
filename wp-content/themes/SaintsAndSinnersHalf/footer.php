@@ -1,5 +1,7 @@
 				
-				</div> <!-- /main-column -->
+						</div> <!-- /inside -->
+					</div> <!-- /main-column -->
+				</div><!-- /row-height -->
 			</div><!-- /row -->
 			<div class="row">
 				<div class="col-md-12">
