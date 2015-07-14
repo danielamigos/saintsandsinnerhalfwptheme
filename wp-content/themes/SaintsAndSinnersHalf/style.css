@@ -88,6 +88,7 @@ input:focus {
 /* logo */
 .logo {
 	text-align: center;
+	padding-top: 20px;
 }
 
 .call-to-action
@@ -171,6 +172,7 @@ input:focus {
 .main-column
 {
 	background-color: #ffffff;
+	padding:0;
 }
 
 /* nav */
@@ -199,8 +201,8 @@ input:focus {
 /* content styles */
 
 .inside {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  /*margin-top: 20px;
+  margin-bottom: 20px;*/
 }
 .inside-full-height {
   /*
@@ -270,7 +272,11 @@ input:focus {
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
-
+.page-title{
+	height: 100px;
+	width: 100%;
+	background-color: #f1592a;
+}
 
 
 /*------------------------------------*\
