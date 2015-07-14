@@ -48,8 +48,8 @@
 		<!-- wrapper -->
 		<div class="container">
 			<div class="row">				
-  				<div class="row-height">
-					<div class="col-sm-3 col-height col-top left-column">						
+  				<div class="row-lg-height row-md-height row-sm-height">
+					<div class="col-sm-3 col-lg-height col-md-height col-sm-height col-top left-column">						
       					<div class="inside">
 							<header class="header clear" role="banner">						
 								<?php if ( get_theme_mod( 'saintsandsinners_logo' )): ?>
@@ -84,12 +84,14 @@
 							</div>
 							<div class="social-links">
 								Follow us on:
-								<a class="facebook" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-facebook.png" alt="Facebook" ></a>
-								<a class="twitter" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-twitter.png" alt="Twitter" ></a>
-								<a class="instagram" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-instagram.png" alt="Instagram" ></a>
-								<a class="linkedin" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-linkedin.png" alt="LinkedIn" ></a>
+								<span>
+									<a class="facebook" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-facebook.png" alt="Facebook" ></a>
+									<a class="twitter" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-twitter.png" alt="Twitter" ></a>
+									<a class="instagram" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-instagram.png" alt="Instagram" ></a>
+									<a class="linkedin" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-linkedin.png" alt="LinkedIn" ></a>
+								</span>
 							</div>													
 						</div> <!-- inside -->
-					</div> <!-- col-sm-3 col-height left-column -->
-					<div class="col-sm-9 col-height col-top main-column">			
+					</div> <!-- col-sm-3 col-lg-height col-md-height  left-column -->
+					<div class="col-sm-9 col-lg-height col-md-height col-sm-height col-top main-column">			
       					<div class="inside">

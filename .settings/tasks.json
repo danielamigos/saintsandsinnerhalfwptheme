@@ -20,8 +20,9 @@
 
 	// Show the output window only if unrecognized errors occur. silent
 	"tasks": [{
-		"taskName": "Copy files to wamp Home",
-	"showOutput": "always",
+		"taskName": "CopyFiles",
+		"isBuildCommand": true,
+	 "showOutput": "never",
 	"suppressTaskName": true,
 	"args": ["${workspaceRoot}\\wp-content","C:\\wamp\\www\\saints\\wp-content", "/H","/R", "/E","/Y"]
 	}]

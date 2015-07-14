@@ -88,7 +88,6 @@ input:focus {
 /* logo */
 .logo {
 	text-align: center;
-	padding-top: 20px;
 }
 
 .call-to-action
@@ -156,6 +155,10 @@ input:focus {
 	margin-top: 20px;
 	color: #ffffff;
 }
+.social-links span
+{
+	white-space: nowrap;
+}
 .social-links img
 {
 	transition: all 0.3s ease 0s;
@@ -193,6 +196,77 @@ input:focus {
 	background-color: #FFFFFF;
 }
 
+/* content styles */
+
+.inside {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.inside-full-height {
+  /*
+  // if you want to give content full height give him height: 100%;
+  // with content full height you can't apply margins to the content
+  // content full height does not work in ie http://stackoverflow.com/questions/27384433/ie-display-table-cell-child-ignores-height-100
+  */
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* columns of same height styles */
+/*
+.row-height {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+.col-height {
+  display: table-cell;
+  float: none;
+  height: 100%;
+}*/
+.col-top {
+  vertical-align: top;
+}
+.col-middle {
+  vertical-align: middle;
+}
+.col-bottom {
+  vertical-align: bottom;
+}
+/*------------------------------------*\
+    FRONT PAGE
+\*------------------------------------*/
+
+.what-where-when-why{
+	height:100px;
+	background-image: url('img/frontpage-gradient.png');
+	position: absolute;
+	width: 100%;
+	/*margin-left: -15px;
+	margin-top: 0;*/
+	text-align: center;
+	vertical-align: top;
+	color:#ffffff;
+	z-index: 10;
+}
+.what-where-when-why > div{
+	display: inline-block;
+	text-align: center;
+	width: 24%;
+	vertical-align: top;
+	text-transform: uppercase;
+}
+
+.what-where-when-why .question{
+	font-size: 38px;
+	font-weight: bold;
+}
+.what-where-when-why .answer{
+	font-size: 10px;
+}
+
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
@@ -227,7 +301,30 @@ input:focus {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width:480px) {
-
+	.row-xs-height {
+	display: table;
+	table-layout: fixed;
+	height: 100%;
+	width: 100%;
+	}
+	.col-xs-height {
+	display: table-cell;
+	float: none;
+	height: 100%;
+	}
+	.col-xs-top {
+	vertical-align: top;
+	}
+	.col-xs-middle {
+	vertical-align: middle;
+	}
+	.col-xs-bottom {
+	vertical-align: bottom;
+	}
+	
+	/*.what-where-when-why{
+		margin-top: 0;
+	}*/
 }
 
 /* Small Devices, Tablets */
@@ -256,15 +353,92 @@ input:focus {
 	    text-align:center;
 		float: none;
 	}
+	
+	.call-to-action a {
+		padding: 5px 5px;
+	}
+	
+	.row-sm-height {
+	display: table;
+	table-layout: fixed;
+	height: 100%;
+	width: 100%;
+	}
+	.col-sm-height {
+	display: table-cell;
+	float: none;
+	height: 100%;
+	}
+	.col-sm-top {
+	vertical-align: top;
+	}
+	.col-sm-middle {
+	vertical-align: middle;
+	}
+	.col-sm-bottom {
+	vertical-align: bottom;
+	}
+	/*
+	.what-where-when-why{
+		margin-top: -20px;
+	}*/
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width:992px) {
 	
+	.call-to-action a {
+		padding: 15px 25px;
+	} 
+	.row-md-height {
+	display: table;
+	table-layout: fixed;
+	height: 100%;
+	width: 100%;
+	}
+	.col-md-height {
+	display: table-cell;
+	float: none;
+	height: 100%;
+	}
+	.col-md-top {
+	vertical-align: top;
+	}
+	.col-md-middle {
+	vertical-align: middle;
+	}
+	.col-md-bottom {
+	vertical-align: bottom;
+	}
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width:1110px) {
+	
+	.call-to-action a {
+		padding: 15px 25px;
+	} 
+	
+	.row-lg-height {
+	display: table;
+	table-layout: fixed;
+	height: 100%;
+	width: 100%;
+	}
+	.col-lg-height {
+	display: table-cell;
+	float: none;
+	height: 100%;
+	}
+	.col-lg-top {
+	vertical-align: top;
+	}
+	.col-lg-middle {
+	vertical-align: middle;
+	}
+	.col-lg-bottom {
+	vertical-align: bottom;
+	}
 
 }
 
@@ -416,134 +590,3 @@ a img.aligncenter {
 	}
 }
 
-/* content styles */
-
-.inside {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.inside-full-height {
-  /*
-  // if you want to give content full height give him height: 100%;
-  // with content full height you can't apply margins to the content
-  // content full height does not work in ie http://stackoverflow.com/questions/27384433/ie-display-table-cell-child-ignores-height-100
-  */
-  height: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* columns of same height styles */
-
-.row-height {
-  display: table;
-  table-layout: fixed;
-  height: 100%;
-  width: 100%;
-}
-.col-height {
-  display: table-cell;
-  float: none;
-  height: 100%;
-}
-.col-top {
-  vertical-align: top;
-}
-.col-middle {
-  vertical-align: middle;
-}
-.col-bottom {
-  vertical-align: bottom;
-}
-
-@media (min-width: 480px) {
-  .row-xs-height {
-    display: table;
-    table-layout: fixed;
-    height: 100%;
-    width: 100%;
-  }
-  .col-xs-height {
-    display: table-cell;
-    float: none;
-    height: 100%;
-  }
-  .col-xs-top {
-    vertical-align: top;
-  }
-  .col-xs-middle {
-    vertical-align: middle;
-  }
-  .col-xs-bottom {
-    vertical-align: bottom;
-  }
-}
-
-@media (min-width: 768px) {
-  .row-sm-height {
-    display: table;
-    table-layout: fixed;
-    height: 100%;
-    width: 100%;
-  }
-  .col-sm-height {
-    display: table-cell;
-    float: none;
-    height: 100%;
-  }
-  .col-sm-top {
-    vertical-align: top;
-  }
-  .col-sm-middle {
-    vertical-align: middle;
-  }
-  .col-sm-bottom {
-    vertical-align: bottom;
-  }
-}
-
-@media (min-width: 992px) {
-  .row-md-height {
-    display: table;
-    table-layout: fixed;
-    height: 100%;
-    width: 100%;
-  }
-  .col-md-height {
-    display: table-cell;
-    float: none;
-    height: 100%;
-  }
-  .col-md-top {
-    vertical-align: top;
-  }
-  .col-md-middle {
-    vertical-align: middle;
-  }
-  .col-md-bottom {
-    vertical-align: bottom;
-  }
-}
-
-@media (min-width: 1200px) {
-  .row-lg-height {
-    display: table;
-    table-layout: fixed;
-    height: 100%;
-    width: 100%;
-  }
-  .col-lg-height {
-    display: table-cell;
-    float: none;
-    height: 100%;
-  }
-  .col-lg-top {
-    vertical-align: top;
-  }
-  .col-lg-middle {
-    vertical-align: middle;
-  }
-  .col-lg-bottom {
-    vertical-align: bottom;
-  }
-}

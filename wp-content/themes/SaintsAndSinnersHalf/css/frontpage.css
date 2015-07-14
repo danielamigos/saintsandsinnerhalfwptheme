@@ -1,0 +1,15 @@
+
+.catapult-slideshow{
+}
+.catapult-slideshow-wrapper{
+	margin:0;
+	padding:0;
+	position:relative;
+	overflow:hidden;
+}
+.catapult-slide{
+	margin:0;
+	padding:0;
+	float:left;
+	position:relative;
+}

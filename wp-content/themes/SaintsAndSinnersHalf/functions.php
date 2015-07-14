@@ -133,6 +133,13 @@ function saintsandsinners_conditional_scripts()
         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
         wp_enqueue_script('scriptname'); // Enqueue it!
     }
+    if (is_page_template('template-frontpage.php')) {
+        wp_register_script('frontpage-script', get_template_directory_uri() . '/js/frontpage.js', array('jquery'), '1.0.0'); // Conditional script(s)
+        wp_enqueue_script('frontpage-script'); // Enqueue it!        
+
+        wp_register_style('frontpage-style', get_template_directory_uri() . '/css/frontpage.css', array(), '1.0', 'all');
+        wp_enqueue_style('frontpage-style'); // Enqueue it!        
+    }
 }
 
 // Load saintssinners Blank styles
