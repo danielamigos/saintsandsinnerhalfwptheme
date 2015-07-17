@@ -276,8 +276,23 @@ input:focus {
 	height: 100px;
 	width: 100%;
 	background-color: #f1592a;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 30px;
+	padding-right: 1px;
+}
+.page-main-content
+{
+	padding:30px;
 }
 
+
+/*------------------------------------*\
+    LAYOUT 01
+\*------------------------------------*/
+.layout-01-main-content
+{
+}
 
 /*------------------------------------*\
     IMAGES

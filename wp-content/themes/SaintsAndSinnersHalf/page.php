@@ -1,12 +1,14 @@
 <?php get_header(); ?>
 
-		<div class="page-title">
+		<div class="page-title" style="background-color:<?PHP the_field('page_title_background_color'); ?>">
+				<h1><?php the_title(); ?></h1>
+				<?PHP if (function_exists(the_subtitle)): ?>
+				<div class="page-subtitle"><?php the_subtitle(); ?></div>
+				<?PHP endif;?>
 		</div>
-		<main role="main">
+		<main role="main" class="page-main-content">
 			<!-- section -->
 			<section>
-	
-				<h1><?php the_title(); ?></h1>
 	
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	
@@ -18,8 +20,6 @@
 					<?php comments_template( '', true ); // Remove if you don't want comments ?>
 	
 					<br class="clear">
-	
-					<?php edit_post_link(); ?>
 	
 				</article>
 				<!-- /article -->
