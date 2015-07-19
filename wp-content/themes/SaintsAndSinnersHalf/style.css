@@ -292,7 +292,58 @@ input:focus {
 \*------------------------------------*/
 .layout-01-main-content
 {
+	color:#ffffff;
 }
+.layout-01-main-content .row
+{
+	margin:0;
+}
+
+.layout-01-main-content .left-column
+{
+	padding:0;
+}
+.layout-01-main-content .right-column
+{
+	background-color:#58585a;
+	padding: 15px;	
+}
+.layout-01-main-content .full-width-column
+{
+	padding:0;	
+}
+/*------------------------------------*\
+    LAYOUT 02
+\*------------------------------------*/
+.layout-02-main-content
+{
+	color:#ffffff;
+}
+.layout-02-main-content .row
+{
+	margin:0;
+}
+
+.layout-02-main-content .left-column
+{
+	padding:0;
+}
+.layout-02-main-content .right-column
+{
+	background-color:#58585a;
+	padding: 15px;	
+}
+.layout-02-main-content .full-width-column
+{
+	background-color: #f1592a;
+	padding: 15px;
+}
+
+.layout-02-main-content .full-width-column img
+{
+	margin: -15px;
+}
+
 
 /*------------------------------------*\
     IMAGES
@@ -611,3 +662,21 @@ a img.aligncenter {
 	}
 }
 
+/*------------------------------------*\
+    CUSTOM STYLES FOR TINYMCE EDITOR
+\*------------------------------------*/
+
+.custom-style-large-orange-text{
+	color: #fbaf3f;
+	font-size:24px;
+	font-weight: bold;
+}
+.custom-style-large-white-text{
+	color: #ffffff;
+	font-size:22px;
+}
+.custom-style-bold-white-text{
+	color: #ffffff;
+	font-size:20px;
+	font-weight: bold;
+}

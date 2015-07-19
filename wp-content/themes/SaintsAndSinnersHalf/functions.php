@@ -501,7 +501,51 @@ function saintsandsinners_theme_customizer( $wp_customize ) {
 }
 add_action('customize_register', 'saintsandsinners_theme_customizer');
 
+function wpb_mce_buttons_2($buttons) {
+	array_unshift($buttons, 'styleselect');
+	return $buttons;
+}
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+/*
+* Callback function to filter the MCE settings
+*/
+
+function my_mce_before_init_insert_formats( $init_array ) {  
+// Define the style_formats array
+	$style_formats = array(  
+		// Each array child is a format with it's own settings
+		array(  
+			'title' => 'Large Orange Text',  
+			'block' => 'span',  
+			'classes' => 'custom-style-large-orange-text',
+			'wrapper' => true,			
+		),  
+		array(  
+			'title' => 'Large White Text',  
+			'block' => 'span',  
+			'classes' => 'custom-style-large-white-text',
+			'wrapper' => true,
+		), 
+		array(  
+			'title' => 'Bold White Text',  
+			'block' => 'span',  
+			'classes' => 'custom-style-bold-white-text ',
+			'wrapper' => true,
+		),
+	);  
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );  	
+	return $init_array;    
+} 
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );// Attach callback to 'tiny_mce_before_init'  
+
+function saintsandsinners_add_editor_styles() {
+    add_editor_style( 'css/custom-styles-for-tinymce-editor.css' );
+}
+add_action( 'init', 'saintsandsinners_add_editor_styles' );
 
 require_once('wp_bootstrap_navwalker.php');
+
+
 
 ?>

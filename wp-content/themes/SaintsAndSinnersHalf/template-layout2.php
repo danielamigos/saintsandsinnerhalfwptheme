@@ -1,4 +1,4 @@
-<?php /* Template Name: Layout 1 */ get_header(); ?>
+<?php /* Template Name: Layout 2 */ get_header(); ?>
 
 		<div class="page-title" style="background-color:<?PHP the_field('page_title_background_color'); ?>">
 				<h1><?php the_title(); ?></h1>
@@ -6,14 +6,14 @@
 				<div class="page-subtitle"><?php the_subtitle(); ?></div>
 				<?PHP endif;?>
 		</div>
-		<main role="main" class="layout-01-main-content">
+		<main role="main" class="layout-02-main-content">
 			<!-- section -->
 			<section>
 			<div class="row" style="">				
   				<div class="row-lg-height row-md-height row-sm-height">
 					<div class="col-sm-6 col-lg-height col-md-height col-sm-height col-top left-column" style="">						
       					<div class="inside">
-							<img src="<?PHP echo get_field('layout_01_image_left_column')['url']; ?>" alt="">	
+							<img src="<?PHP echo get_field('layout_02_image_left_column')['url']; ?>" alt="">	
 						</div> <!-- /inside -->
 					</div> <!-- /main-column -->
 					<div class="col-sm-6 col-lg-height col-md-height col-sm-height col-top right-column" style="">						
@@ -54,7 +54,7 @@
 			</div><!-- /row -->
 			<div class="row">
 				<div class="col-md-12 full-width-column">
-					<img src="<?PHP echo get_field('layout_01_image_full_width_bottom')['url']; ?>" alt="">
+					<?PHP the_field('layout_2_full_width_content'); ?>
 				</div>				
 			</div>
 			

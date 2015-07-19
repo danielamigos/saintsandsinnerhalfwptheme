@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    CUSTOM STYLES FOR TINYMCE EDITOR
+\*------------------------------------*/
+
+.custom-style-large-orange-text{
+	color: #fbaf3f;
+	font-size:24px;
+	font-weight: bold;
+}
+.custom-style-large-white-text{
+	color: #aaaaaa;
+	font-size:22px;
+}
+.custom-style-bold-white-text{
+	color: #aaaaaa;
+	font-size:20px;
+	font-weight: bold;
+}
