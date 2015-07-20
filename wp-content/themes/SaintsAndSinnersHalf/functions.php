@@ -544,6 +544,23 @@ function saintsandsinners_add_editor_styles() {
 }
 add_action( 'init', 'saintsandsinners_add_editor_styles' );
 
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Front Page Slideshow',
+		'menu_title'	=> 'Front Page Slideshow',
+		'parent_slug'	=> 'theme-general-settings',
+	));	
+}
+
 require_once('wp_bootstrap_navwalker.php');
 
 

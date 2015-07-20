@@ -20,26 +20,40 @@
 			</div>
 		</div>
 		<section>		
+			<?PHP $slides = '';
+				  $numberOfSlides = count( get_field( 'flexible_content_slides', 'option' ) );
+				if( have_rows('flexible_content_slides', 'option') ): ?>
 			<div class="catapult-slideshow">
 				<div class="catapult-slideshow-wrapper">
-					<div class="catapult-slide">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/slides/slide-01.png">
+					<div style="position:absolute;z-index:1; bottom:0; padding-left:20px; padding-bottom:20px;">
+						<div style="font-weight:bold;font-size:24px;">Images Description, <br />may be many lines</div>
+						<div style="font-weight:bold;font-size:24px;">							
+			<?PHP 		for($i=0; $i<$numberOfSlides; $i++) :?>			
+							<a href="#" class='slide-indicator' data-index='<?PHP echo $i; ?>'>slide <?PHP echo $i+1; ?></a>		
+			<?PHP 		endfor; ?>							
+							<a href="#" class="pause-slide">Pause</a>
+						</div>
+					</div>
+					<div style="position:absolute;z-index:1; top:50%; padding-left: 20px;">
+						<a class="previous-slide" href='#'><img src='<?php echo get_template_directory_uri(); ?>/img/arrow-left.png' alt='Previous' ></a>
+					</div>
+					<div style="position:absolute;z-index:1; top:50%; right:0; padding-right:20px;">
+						<a class="next-slide" href='#'><img src='<?php echo get_template_directory_uri(); ?>/img/arrow-right.png' alt='Next' ></a>
 					</div>				
+			<?PHP 		while ( have_rows('flexible_content_slides', 'option') ) : the_row(); 
+							if( get_row_layout() == 'image' ):$image = get_sub_field('image'); $link = get_sub_field('link');?>				
 					<div class="catapult-slide">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/slides/slide-03.png">
-					</div>				
-					<div class="catapult-slide">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/slides/slide-05.png">
-					</div>					
+					<?PHP if($link!=''):?> 
+						<a href='<?PHP echo $link; ?>'><img src="<?php echo $image['url']; ?>"  data-description="<?PHP the_sub_field('description'); ?>"></a>
+					<?PHP else: ?>
+						<img src="<?php echo $image['url']; ?>" data-description="<?PHP the_sub_field('description'); ?>">
+					<?PHP endif; ?>
+					</div>		
+			 <?PHP			endif;
+				 		endwhile; ?>				
 				</div>
 			</div>
-
-			<!--
-			<h1><?php //_e( 'Latest Posts', 'saintsandsinners' ); ?></h1>
-
-			<?php //get_template_part('loop'); ?>
-
-			<?php //get_template_part('pagination'); ?>-->	
+			<?PHP endif;  ?>
 		</section>
 		<!-- /section -->
 	</main>

@@ -176,25 +176,7 @@ input:focus {
 }
 
 /* nav */
-.nav {
 
-}
-
-.orange-dot > a
-{
-}
-.orange-dot > a:hover
-{
-	background-image: url(img/orange-dot_01.png);
-	background-repeat: no-repeat;
-	background-position: right;
-}
-.orange-dot.active > a
-{
-	background-image: url(img/orange-dot_01.png);
-	background-repeat: no-repeat;
-	background-position: right;
-}
 /*.navbar-inverse .navbar-nav > .orange-dot.active > a{
 	background-color: transparent;
 }
@@ -260,6 +242,60 @@ input:focus {
 .col-bottom {
   vertical-align: bottom;
 }
+/*------------------------------------*\
+    MENU DOTS
+\*------------------------------------*/
+
+.white-dot > a:hover, 
+.white-dot.active > a
+{
+	background-image: url(img/dots/white-dot.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.orange-dot > a:hover, 
+.orange-dot.active > a
+{
+	background-image: url(img/dots/orange-dot.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.dark-orange-dot > a:hover, 
+.dark-orange-dot.active > a
+{
+	background-image: url(img/dots/dark-orange-dot.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.purple-dot > a:hover, 
+.purple-dot.active > a
+{
+	background-image: url(img/dots/purple-dot.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.aqua-dot > a:hover, 
+.aqua-dot.active > a
+{
+	background-image: url(img/dots/aqua-dot.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.lime-green-dot > a:hover, 
+.lime-green-dot.active > a
+{
+	background-image: url(img/dots/lime-green-dot.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.red-dot > a:hover, 
+.red-dot.active > a
+{
+	background-image: url(img/dots/red-dot.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
 /*------------------------------------*\
     FRONT PAGE
 \*------------------------------------*/
