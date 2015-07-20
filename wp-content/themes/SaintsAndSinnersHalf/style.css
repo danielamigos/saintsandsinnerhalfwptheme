@@ -179,6 +179,29 @@ input:focus {
 .nav {
 
 }
+
+.orange-dot > a
+{
+}
+.orange-dot > a:hover
+{
+	background-image: url(img/orange-dot_01.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.orange-dot.active > a
+{
+	background-image: url(img/orange-dot_01.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+/*.navbar-inverse .navbar-nav > .orange-dot.active > a{
+	background-color: transparent;
+}
+.orange-dot.active{
+	background-color: #000000;
+}*/
+
 /* sidebar */
 .sidebar {
 
@@ -344,6 +367,29 @@ input:focus {
 	margin: -15px;
 }
 
+
+/*------------------------------------*\
+    LAYOUT 01
+\*------------------------------------*/
+.dynamic-content-main-content
+{
+	color:#ffffff;
+}
+.dynamic-content-main-content .row
+{
+	margin:0;
+}
+
+.dynamic-content-main-content .image-column
+{
+	overflow: hidden;
+	padding:0;
+}
+.dynamic-content-main-content .text-column
+{
+	background-color:#58585a;
+	padding: 15px;	
+}
 
 /*------------------------------------*\
     IMAGES
