@@ -61,24 +61,31 @@
 								<?php endif; ?>		
 							</header>
 							<div class="call-to-action">
-								<a href="#" class="btn btn-default btn-lg">Register Today</a>
+								<a href="<?PHP the_field('register_link','option') ?>" class="btn btn-default btn-lg">Register Today</a>
 							</div>
 							<div class="countdown">
+								<?PHP
+									$racedate = get_field('raceday_date','option');
+									$days = 35;
+									$hours = 20;
+									$minutes = 35;
+									$seconds = 30;
+								 ?>
 								<h2>Countdown to Raceday!</h2>
 								<div class="countdown-days">
-									<div class="value">35</div>
+									<div class="value" data-hours="<?PHP echo $days; ?>"><?PHP echo $days; ?></div>
 									<div class="title">Days</div>
 								</div>
 								<div class="countdown-hours">							
-									<div class="value">20</div>
+									<div class="value" data-hours="<?PHP echo $hours; ?>"><?PHP echo $hours; ?></div>
 									<div class="title">Hours</div>
 								</div>
 								<div class="countdown-minutes">
-									<div class="value">35</div>
+									<div class="value" data-hours="<?PHP echo $minutes; ?>"><?PHP echo $minutes; ?></div>
 									<div class="title">Minuts</div>
 								</div>
 								<div class="countdown-seconds">
-									<div class="value">30</div>
+									<div class="value" data-hours="<?PHP echo $seconds; ?>"><?PHP echo $seconds; ?></div>
 									<div class="title">Seconds</div>
 								</div>
 							</div>

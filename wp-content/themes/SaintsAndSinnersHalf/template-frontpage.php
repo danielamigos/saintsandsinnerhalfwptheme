@@ -26,28 +26,28 @@
 			<div class="catapult-slideshow">
 				<div class="catapult-slideshow-wrapper" style="">
 					<div class="slideshow-gradient"></div>
-					<div style="position:absolute;z-index:1; bottom:0; padding-left:20px; padding-bottom:20px;">
-						<div style="font-weight:bold;font-size:24px;color:#ffffff;">Images Description, <br />may be many lines</div>
-						<div style="font-weight:bold;font-size:24px;">							
+					<div class="slideshow-controls">
+						<div class="slide-description"></div>
+						<div class="slide-indicator-wrapper">							
 			<?PHP 		for($i=0; $i<$numberOfSlides; $i++) :?>			
 							<a href="#" class='slide-indicator <?PHP echo (($i==0)? 'active':''); ?>' data-index='<?PHP echo $i; ?>'><img src="<?php echo get_template_directory_uri(); ?>/img/slide-indicator.png"></a>		
 			<?PHP 		endfor; ?>							
 							<a href="#" class="pause-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/pause-button.png"></a>
 						</div>
 					</div>
-					<div style="position:absolute;z-index:1; top:50%; padding-left: 20px;">
+					<div class="slideshow-left-arrow">
 						<a class="previous-slide" href='#'><img src='<?php echo get_template_directory_uri(); ?>/img/arrow-left.png' alt='Previous' ></a>
 					</div>
-					<div style="position:absolute;z-index:1; top:50%; right:0; padding-right:20px;">
+					<div class="slideshow-right-arrow">
 						<a class="next-slide" href='#'><img src='<?php echo get_template_directory_uri(); ?>/img/arrow-right.png' alt='Next' ></a>
 					</div>				
 			<?PHP 		while ( have_rows('flexible_content_slides', 'option') ) : the_row(); 
 							if( get_row_layout() == 'image' ):$image = get_sub_field('image'); $link = get_sub_field('link');?>				
 					<div class="catapult-slide">
 					<?PHP if($link!=''):?> 
-						<a href='<?PHP echo $link; ?>'><img src="<?php echo $image['url']; ?>"  data-description="<?PHP the_sub_field('description'); ?>"></a>
+						<a href='<?PHP echo $link; ?>'><img src="<?php echo $image['url']; ?>"  data-description="<?PHP the_sub_field('description'); ?>" data-link="<?PHP echo $link; ?>"></a>
 					<?PHP else: ?>
-						<img src="<?php echo $image['url']; ?>" data-description="<?PHP the_sub_field('description'); ?>">
+						<img src="<?php echo $image['url']; ?>" data-description="<?PHP the_sub_field('description'); ?>" data-link="">
 					<?PHP endif; ?>
 					</div>		
 			 <?PHP			endif;
