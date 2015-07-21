@@ -8,11 +8,17 @@
 	position: absolute;
 	z-index:1;
 }
+.slide-indicator
+{
+	opacity: .5;
+	transition: all 0.3s ease 0s;
+}
+.slide-indicator.active,
+.slide-indicator:hover
+{
+	opacity: 1;
+}
 .catapult-slideshow{
-	
-	background-image: url(../img/gradient-slideshow-01.png);
-	background-repeat: repeat-x;
-	background-position: bottom;
 }
 .catapult-slideshow-wrapper{
 	margin:0;
