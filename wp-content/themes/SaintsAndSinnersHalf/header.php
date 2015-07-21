@@ -63,17 +63,21 @@
 							<div class="call-to-action">
 								<a href="<?PHP the_field('register_link','option') ?>" class="btn btn-default btn-lg">Register Today</a>
 							</div>
-							<div class="countdown">
+							<div class="countdown" data-date='<?PHP the_field('raceday_date','option'); ?>' >
 								<?PHP
-									$racedate = get_field('raceday_date','option');
-									$days = 35;
-									$hours = 20;
-									$minutes = 35;
-									$seconds = 30;
+									date_default_timezone_set('America/Phoenix');
+									$racedate = strtotime(get_field('raceday_date','option').'T00:00:00-07:00')-mktime();								
+								    $dtF = new DateTime("@0");
+								    $dtT = new DateTime("@$racedate");
+									$dif = $dtF->diff($dtT);
+									$days = $dif->days;
+									$hours = $dif->h;
+									$minutes = $dif->i;
+									$seconds = $dif->s;
 								 ?>
 								<h2>Countdown to Raceday!</h2>
 								<div class="countdown-days">
-									<div class="value" data-hours="<?PHP echo $days; ?>"><?PHP echo $days; ?></div>
+									<div class="value" data-days="<?PHP echo $days; ?>"><?PHP echo $days; ?></div>
 									<div class="title">Days</div>
 								</div>
 								<div class="countdown-hours">							
@@ -81,11 +85,11 @@
 									<div class="title">Hours</div>
 								</div>
 								<div class="countdown-minutes">
-									<div class="value" data-hours="<?PHP echo $minutes; ?>"><?PHP echo $minutes; ?></div>
-									<div class="title">Minuts</div>
+									<div class="value" data-minutes="<?PHP echo $minutes; ?>"><?PHP echo $minutes; ?></div>
+									<div class="title">Minutes</div>
 								</div>
 								<div class="countdown-seconds">
-									<div class="value" data-hours="<?PHP echo $seconds; ?>"><?PHP echo $seconds; ?></div>
+									<div class="value" data-seconds="<?PHP echo $seconds; ?>"><?PHP echo $seconds; ?></div>
 									<div class="title">Seconds</div>
 								</div>
 							</div>
