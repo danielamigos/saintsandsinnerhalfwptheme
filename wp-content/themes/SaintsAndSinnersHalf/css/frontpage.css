@@ -1,11 +1,25 @@
-
+.slideshow-gradient
+{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/gradient-slideshow-01.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	position: absolute;
+	z-index:1;
+}
 .catapult-slideshow{
+	
+	background-image: url(../img/gradient-slideshow-01.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
 }
 .catapult-slideshow-wrapper{
 	margin:0;
 	padding:0;
 	position:relative;
 	overflow:hidden;
+	
 }
 .catapult-slide{
 	margin:0;

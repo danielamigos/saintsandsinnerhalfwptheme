@@ -24,14 +24,15 @@
 				  $numberOfSlides = count( get_field( 'flexible_content_slides', 'option' ) );
 				if( have_rows('flexible_content_slides', 'option') ): ?>
 			<div class="catapult-slideshow">
-				<div class="catapult-slideshow-wrapper">
+				<div class="catapult-slideshow-wrapper" style="">
+					<div class="slideshow-gradient"></div>
 					<div style="position:absolute;z-index:1; bottom:0; padding-left:20px; padding-bottom:20px;">
 						<div style="font-weight:bold;font-size:24px;">Images Description, <br />may be many lines</div>
 						<div style="font-weight:bold;font-size:24px;">							
 			<?PHP 		for($i=0; $i<$numberOfSlides; $i++) :?>			
-							<a href="#" class='slide-indicator' data-index='<?PHP echo $i; ?>'>slide <?PHP echo $i+1; ?></a>		
+							<a href="#" class='slide-indicator' data-index='<?PHP echo $i; ?>'><img src="<?php echo get_template_directory_uri(); ?>/img/slide-indicator.png"></a>		
 			<?PHP 		endfor; ?>							
-							<a href="#" class="pause-slide">Pause</a>
+							<a href="#" class="pause-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/pause-button.png"></a>
 						</div>
 					</div>
 					<div style="position:absolute;z-index:1; top:50%; padding-left: 20px;">
