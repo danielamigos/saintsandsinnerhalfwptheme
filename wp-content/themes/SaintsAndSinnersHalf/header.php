@@ -61,7 +61,7 @@
 								<?php endif; ?>		
 							</header>
 							<div class="call-to-action">
-								<a href="<?PHP the_field('register_link','option') ?>" class="btn btn-default btn-lg">Register Today</a>
+								<a href="<?PHP the_field('register_link','option') ?>" class="btn btn-default">Register Today</a>
 							</div>
 							<div class="countdown" data-date='<?PHP the_field('raceday_date','option'); ?>' >
 								<?PHP
@@ -93,13 +93,25 @@
 									<div class="title">Seconds</div>
 								</div>
 							</div>
+							<?PHP 
+								$facebookLink = get_field('facebook_link','option');
+								$twitterLink = get_field('twitter_link','option');
+								$instagramLink = get_field('instagram_link','option');
+								$linkedinLink = get_field('linkedin_link','option');
+								
+							?>
 							<div class="social-links">
 								Follow us on:
 								<span>
-									<a class="facebook" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-facebook.png" alt="Facebook" ></a>
-									<a class="twitter" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-twitter.png" alt="Twitter" ></a>
-									<a class="instagram" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-instagram.png" alt="Instagram" ></a>
-									<a class="linkedin" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-linkedin.png" alt="LinkedIn" ></a>
+								<?PHP if($facebookLink): ?> 
+									<a class="facebook" href="<?PHP echo $facebookLink; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/social-facebook.png" alt="Facebook" ></a>
+								<?PHP endif; if ($twitterLink): ?>
+									<a class="twitter" href="<?PHP echo $twitterLink; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/social-twitter.png" alt="Twitter" ></a>
+								<?PHP endif; if ($instagramLink): ?>
+									<a class="instagram" href="<?PHP echo $instagramLink; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/social-instagram.png" alt="Instagram" ></a>
+								<?PHP endif; if ($linkedinLink): ?>
+									<a class="linkedin" href="<?PHP echo $linkedinLink; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/social-linkedin.png" alt="LinkedIn" ></a>
+								<?PHP endif; ?>
 								</span>
 							</div>													
 						</div> <!-- inside -->

@@ -1,7 +1,7 @@
 <?php /* Template Name: Dynamic Content */ get_header(); ?>
 
-		<div class="page-title" style="background-color:<?PHP the_field('page_title_background_color'); ?>">
-				<h1><?php the_title(); ?></h1>
+		<div class="page-title-header" style="background-color:<?PHP the_field('page_title_background_color'); ?>">
+				<div class="page-title"><?php the_title(); ?></div>
 				<?PHP if (function_exists(the_subtitle)): ?>
 				<div class="page-subtitle"><?php the_subtitle(); ?></div>
 				<?PHP endif;?>
