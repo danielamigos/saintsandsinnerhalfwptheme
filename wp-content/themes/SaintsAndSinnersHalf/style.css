@@ -554,6 +554,16 @@ input:focus {
 	    text-align:center;
 		float: none;
 	}
+	.dropdown-menu
+	{
+		padding:0;
+		background-color: #444;
+	}
+	.dropdown-menu>li>a
+	{
+		padding:10px 20px;
+		color:#ffffff;
+	}
 	
 	.call-to-action a {
 		padding: 10px 5px;
