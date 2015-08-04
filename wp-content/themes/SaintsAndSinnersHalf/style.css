@@ -187,6 +187,7 @@ input:focus {
 .navbar-nav
 {
 	font-family: 'gotham_htflight';
+	text-transform: uppercase;
 }
 /*.navbar-inverse .navbar-nav > .orange-dot.active > a{
 	background-color: transparent;
@@ -251,12 +252,14 @@ input:focus {
     MENU DOTS
 \*------------------------------------*/
 
+.navbar-nav i{
+	color:transparent;
+}
+
 .white-dot > a:hover, 
-.white-dot.active > a
+.white-dot.active > a > i
 {
-	background-image: url(img/dots/white-dot.png);
-	background-repeat: no-repeat;
-	background-position: right;
+	color: #123456;
 }
 .orange-dot > a:hover, 
 .orange-dot.active > a
@@ -324,12 +327,14 @@ input:focus {
 	line-height: 46px;
 	font-family: 'GothamCondensed-Medium';
 	color:#ffffff;
+	text-transform: uppercase;
 }
 
 .page-subtitle{
 	font-size: 14px;
 	font-family: 'GothamCondensed-Light';
 	color:#ffffff;	
+	text-transform: uppercase;
 }
 
 .page-main-content
@@ -366,6 +371,9 @@ input:focus {
 {
 	background-color:#58585a;
 	padding: 15px;	
+	font-family:'gotham_htflight';
+	font-size:12px;
+	line-height:13px;
 }
 
 /*------------------------------------*\

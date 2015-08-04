@@ -151,6 +151,9 @@ function saintsandsinners_styles()
     //wp_register_style('bootstrap', 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', array(), '3.3.5', 'all');
     wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.5', 'all');
     wp_enqueue_style('bootstrap'); // Enqueue it!
+    
+    wp_register_style('font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', array(), '3.2.1', 'all');
+    wp_enqueue_style('font-awesome'); // Enqueue it!
 
     wp_register_style('saintsandsinners', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('saintsandsinners'); // Enqueue it!
