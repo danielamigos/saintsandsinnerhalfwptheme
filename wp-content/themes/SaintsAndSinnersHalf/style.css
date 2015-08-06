@@ -189,6 +189,11 @@ input:focus {
 	font-family: 'gotham_htflight';
 	text-transform: uppercase;
 }
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:hover, 
+.navbar-inverse .navbar-nav>.active>a:focus{
+	background-color: inherit;
+}
 /*.navbar-inverse .navbar-nav > .orange-dot.active > a{
 	background-color: transparent;
 }
@@ -252,56 +257,53 @@ input:focus {
     MENU DOTS
 \*------------------------------------*/
 
-.navbar-nav i{
-	color:transparent;
+ul.navbar-nav  > li > a > i{
+	color:#222222;
+	transition: all 0.3s ease 0s;
+}
+ul.dropdown-menu  > li > a > i{
+	display: none;
 }
 
-.white-dot > a:hover, 
+.white-dot > a:hover > i, 
 .white-dot.active > a > i
 {
-	color: #123456;
+	color: #ffffff;
 }
-.orange-dot > a:hover, 
-.orange-dot.active > a
+.orange-dot > a:hover > i, 
+.orange-dot.active > a > i
 {
-	background-image: url(img/dots/orange-dot.png);
-	background-repeat: no-repeat;
-	background-position: right;
+	color: #f7941e;
 }
-.dark-orange-dot > a:hover, 
-.dark-orange-dot.active > a
+.dark-orange-dot > a:hover > i, 
+.dark-orange-dot.active > a > i
 {
-	background-image: url(img/dots/dark-orange-dot.png);
-	background-repeat: no-repeat;
-	background-position: right;
+	color: #f1592a ;
 }
-.purple-dot > a:hover, 
-.purple-dot.active > a
+.purple-dot > a:hover > i, 
+.purple-dot.active > a > i
 {
-	background-image: url(img/dots/purple-dot.png);
-	background-repeat: no-repeat;
-	background-position: right;
+	color: #92278f ;
 }
-.aqua-dot > a:hover, 
-.aqua-dot.active > a
+.aqua-dot > a:hover > i, 
+.aqua-dot.active > a > i
 {
-	background-image: url(img/dots/aqua-dot.png);
-	background-repeat: no-repeat;
-	background-position: right;
+	color: #13a89e ;
 }
-.lime-green-dot > a:hover, 
-.lime-green-dot.active > a
+.lime-green-dot > a:hover > i, 
+.lime-green-dot.active > a > i
 {
-	background-image: url(img/dots/lime-green-dot.png);
-	background-repeat: no-repeat;
-	background-position: right;
+	color: #8cc63f ;
 }
-.red-dot > a:hover, 
-.red-dot.active > a
+.red-dot > a:hover > i, 
+.red-dot.active > a > i
 {
-	background-image: url(img/dots/red-dot.png);
-	background-repeat: no-repeat;
-	background-position: right;
+	color: #ef4036 ;
+}
+.blue-dot > a:hover > i, 
+.blue-dot.active > a > i
+{
+	color: #25aae1 ;
 }
 /*------------------------------------*\
     SLIDES
@@ -821,11 +823,12 @@ a img.aligncenter {
 .custom-style-large-orange-text{
 	color: #fbaf3f;
 	font-size:24px;
-	font-weight: bold;
+	font-family: 'GothamCondensed-Bold';
 }
 .custom-style-large-white-text{
 	color: #ffffff;
-	font-size:22px;
+	font-size:20px;
+	font-family: 'gotham_htflight';
 }
 .custom-style-bold-white-text{
 	color: #ffffff;

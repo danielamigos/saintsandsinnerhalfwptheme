@@ -60,10 +60,7 @@
 									endif;
 							elseif(get_row_layout() == 'text_and_image'):
 					        	$textPosition = get_sub_field('text_position');
-					        	$text = get_sub_field('text');
-					        	$image = get_sub_field('image');
-					        	$link = get_sub_field('image_link'); ?>
-								
+					        	$text = get_sub_field('text'); ?>								
 			<div class="row" style="">				
   				<div class="row-lg-height row-md-height row-sm-height">
 			  				<?PHP if($textPosition == 'Left') :?>
@@ -75,11 +72,15 @@
 							<?PHP else: ?>
 					<div class="col-sm-6 col-lg-height col-md-height col-sm-height col-top image-column" style="">						
       					<div class="inside">
+							  <?PHP while ( have_rows('image_repeater') ) : the_row();
+					        	$image = get_sub_field('image');
+					        	$link = get_sub_field('image_link'); ?>
 								<?PHP if($link==''):?>							  						    
 							<img src="<?PHP echo $image['url']; ?>" alt=""> 
 								<?PHP else: ?>
 							<a href="<?PHP echo $link; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
-								<?PHP endif; ?>
+								<?PHP endif;
+									endwhile; ?>
 						</div> <!-- /inside -->
 					</div> <!-- /main-column -->
 							<?PHP endif;  
