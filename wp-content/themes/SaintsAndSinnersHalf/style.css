@@ -24,14 +24,15 @@
 }
 /* html element 62.5% font-size for REM use */
 html {
-	/*font-size:62.5%;*/
+  position: relative;
+  min-height: 100%;
 }
 body {
 	/*font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 	color:#444;
 	background-color: #fbaf3f;	
 	padding-top: 37px;
-	padding-bottom: 20px;
+  margin-bottom: 64px;
 }
 /* clear */
 .clear:before,
@@ -51,11 +52,12 @@ img {
 	vertical-align:bottom;
 }
 a {
-	color:#444;
+	color:#ffffff;
 	text-decoration:none;
 }
 a:hover {
-	color:#444;
+	color:#ffffff;
+	text-decoration: underline;
 }
 a:focus {
 	outline:0;
@@ -94,7 +96,7 @@ input:focus {
 .call-to-action
 {
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
 .call-to-action a
@@ -157,7 +159,7 @@ input:focus {
 {
 	text-align: center;
 	vertical-align: middle;
-	margin-top: 20px;
+	margin-top: 10px;
 	color: #ffffff;
 	font-family: 'GothamCondensed-Book';
 	font-size:24px;
@@ -208,6 +210,11 @@ input:focus {
 /* footer */
 .footer {
 
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 64px;background-color:#222222;
 }
 
 .left-column
@@ -252,6 +259,30 @@ input:focus {
 }
 .col-bottom {
   vertical-align: bottom;
+}
+.sponsers-text-wrapper{
+	color: #999999;
+	text-transform: uppercase;
+	text-align: center;
+	padding:10px 0;
+	
+}
+.sponsers-top{
+	font-family: 'gotham_htflight';
+	font-size: 16px;
+	line-height: 16px;
+	
+}
+.sponsers-bottom{
+	font-family: 'gotham_htfbold';
+	font-size: 26px;
+	line-height: 20px;
+	
+}
+.sponser-logo{
+	text-align: center;
+	vertical-align: middle;
+	padding:10px 0;
 }
 /*------------------------------------*\
     MENU DOTS

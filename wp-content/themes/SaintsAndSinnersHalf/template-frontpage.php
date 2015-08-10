@@ -25,7 +25,6 @@
 				if( have_rows('flexible_content_slides', 'option') ): ?>
 			<div class="catapult-slideshow">
 				<div class="catapult-slideshow-wrapper" style="">
-					<div class="slideshow-gradient"></div>
 					<div class="slideshow-controls">
 						<div class="slide-description"></div>
 						<div class="slide-indicator-wrapper">							
@@ -44,13 +43,33 @@
 			<?PHP 		while ( have_rows('flexible_content_slides', 'option') ) : the_row(); 
 							if( get_row_layout() == 'image' ):$image = get_sub_field('image'); $link = get_sub_field('link');?>				
 					<div class="catapult-slide">
+					<div class="slideshow-gradient">
+						<div class="container" style="width:100%;height:100%;position:relative;">
+							<?PHP if($link != ""): ?> 
+							<a href="<?PHP echo $link; ?>">
+						        <span class="link-spanner" style=" position:absolute;width:100%;height:100%;top:0;left: 0;z-index: 1;"></span>
+						    </a>
+							<?PHP endif; ?>
+						</div>
+					</div>
 					<?PHP if($link!=''):?> 
-						<a href='<?PHP echo $link; ?>'><img src="<?php echo $image['url']; ?>"  data-description="<?PHP the_sub_field('description'); ?>" data-link="<?PHP echo $link; ?>"></a>
+						<a href='<?PHP echo $link; ?>'><img class="slide-image"  src="<?php echo $image['url']; ?>"  data-description="<?PHP the_sub_field('description'); ?>" data-link=""></a>
 					<?PHP else: ?>
-						<img src="<?php echo $image['url']; ?>" data-description="<?PHP the_sub_field('description'); ?>" data-link="">
+						<img class="slide-image" src="<?php echo $image['url']; ?>" data-description="<?PHP the_sub_field('description'); ?>" data-link="">
 					<?PHP endif; ?>
 					</div>		
-			 <?PHP			endif;
+			 <?PHP		elseif( get_row_layout() == 'video' ):$image = get_sub_field('image'); $video = get_sub_field('link'); ?>
+					<div class="catapult-slide">
+					<div class="slideshow-gradient">
+						<div class="container" style="width:100%;height:100%;position:relative;">
+							<a href="<?PHP echo $video; ?>" class="pause-slide" data-rel="lightbox-video-0">
+						        <img src="<?php echo get_template_directory_uri(); ?>/img/play-button.png" style="height:100px;width:100px;top:50%;left:50%;position:absolute;margin-left:-50px;margin-top:-40px;">
+						    </a>
+						</div>
+					</div>
+						<img class="slide-image"  src="<?php echo $image['url']; ?>" data-description="<?PHP the_sub_field('description'); ?>" data-link="">
+					</div>			 
+			 <?PHP 			endif;
 				 		endwhile; ?>				
 				</div>
 			</div>

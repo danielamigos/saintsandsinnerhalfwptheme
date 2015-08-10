@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 	var inTransition = false;
 	var slideShowInterval;
 	var speed = 4000;
-	$('.slide-description').html($(slides[0]).find('img').attr('data-description'));
+	$('.slide-description').html($(slides[0]).find('.slide-image').attr('data-description'));
 	
 	slideShowInterval = setInterval(NextSlide, speed);
 					
@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 	slides.wrapAll('<div id="catapultSlidesHolder"></div>');
 	slides.css({ 'float' : 'left' });
 	$('#catapultSlidesHolder').css('width', slideWidth * (numberOfSlides+1));
-	$('.catapult-slide img').css('display', 'block');
+	$('.catapult-slide .slide-image').css('display', 'block');
 	//$('#catapultSlidesHolder').click(function(){ NextSlide(); });
 
 
@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
 					currentPos = 0;
 				}
 				$(".slide-indicator[data-index='"+currentPos+"']").addClass('active');
-				var img = $(slides[currentPos]).find('img');
+				var img = $(slides[currentPos]).find('.slide-image');
 				if ($(img).attr('data-link')!='')
 					$('.slide-description').html($('<a></a>',{'href':$(img).attr('data-link')}).append($(img).attr('data-description'))).fadeIn();
 				else
@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
 			}
 			$('#catapultSlidesHolder').animate({'marginLeft' : slideWidth*-(currentPos)},function(){
 				$(".slide-indicator[data-index='"+currentPos+"']").addClass('active');
-				var img = $(slides[currentPos]).find('img');
+				var img = $(slides[currentPos]).find('.slide-image');
 				if ($(img).attr('data-link')!='')
 					$('.slide-description').html($('<a></a>',{'href':$(img).attr('data-link')}).append($(img).attr('data-description'))).fadeIn();
 				else
@@ -117,7 +117,7 @@ jQuery(document).ready(function($) {
 				$('#catapultSlidesHolder').animate({'marginLeft' : slideWidth*-(index)},function(){		
 					currentPos=parseInt(index);						
 					$(".slide-indicator[data-index='"+index+"']").addClass('active');
-					var img = $(slides[index]).find('img');
+					var img = $(slides[index]).find('.slide-image');
 					if ($(img).attr('data-link')!='')
 						$('.slide-description').html($('<a></a>',{'href':$(img).attr('data-link')}).append($(img).attr('data-description'))).fadeIn();
 					else

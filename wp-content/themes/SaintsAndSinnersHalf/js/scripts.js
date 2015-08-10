@@ -13,7 +13,6 @@
 		StartCountdown();
 		function StartCountdown()
 		{
-			console.log(seconds);
 			slideShowInterval = setInterval(CountDownTick, 1000);
 		}
 		

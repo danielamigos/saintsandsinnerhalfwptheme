@@ -15,11 +15,13 @@
 					    while ( have_rows('dynamic_content') ) : the_row();					
 					        if( get_row_layout() == 'text' ):					
 					        	$columns = get_sub_field('columns');					
-					        	$text = get_sub_field('text');					
-					        	$text2 = get_sub_field('text_2'); 
+					        	$text = get_sub_field('text');		
+								$bgcolor1 = get_sub_field('background_color_for_column_1');			
+					        	$text2 = get_sub_field('text_2');
+								$bgcolor2 = get_sub_field('background_color_for_column_2');
 								if ($columns == '1') : ?>
 			<div class="row" style="">				
-  				<div class="col-md-12 text-column">
+  				<div class="col-md-12 text-column" style="background-color:<?PHP echo $bgcolor1;?>;">
 					<?PHP echo $text; ?>
 				</div><!-- /row-height -->
 			</div><!-- /row -->
@@ -27,12 +29,12 @@
 								
 			<div class="row" style="">				
   				<div class="row-lg-height row-md-height row-sm-height">
-					<div class="col-sm-6 col-lg-height col-md-height col-sm-height col-top text-column" style="">						
+					<div class="col-sm-6 col-lg-height col-md-height col-sm-height col-top text-column" style="background-color:<?PHP echo $bgcolor1;?>;">						
       					<div class="inside">
 							<?PHP echo $text; ?>
 						</div> <!-- /inside -->
 					</div> <!-- /main-column -->
-					<div class="col-sm-6 col-lg-height col-md-height col-sm-height col-top text-column" style="">						
+					<div class="col-sm-6 col-lg-height col-md-height col-sm-height col-top text-column" style="background-color:<?PHP echo $bgcolor2;?>;">						
       					<div class="inside">
 						  <?PHP echo $text2; ?>
 						</div> <!-- /inside -->
@@ -60,11 +62,12 @@
 									endif;
 							elseif(get_row_layout() == 'text_and_image'):
 					        	$textPosition = get_sub_field('text_position');
-					        	$text = get_sub_field('text'); ?>								
+					        	$text = get_sub_field('text'); 
+								$bgColor = get_sub_field('background_color'); ?>								
 			<div class="row" style="">				
   				<div class="row-lg-height row-md-height row-sm-height">
 			  				<?PHP if($textPosition == 'Left') :?>
-					<div class="col-sm-6 col-lg-height col-md-height col-sm-height col-top text-column" style="">						
+					<div class="col-sm-6 col-lg-height col-md-height col-sm-height col-top text-column" style="background-color:<?PHP echo $bgColor;?>;">						
       					<div class="inside">
 							  <?PHP echo $text; ?>  								    
 						</div> <!-- /inside -->
@@ -85,7 +88,7 @@
 					</div> <!-- /main-column -->
 							<?PHP endif;  
 								if($textPosition == 'Right') :?> 
-					<div class="col-sm-6 col-lg-height col-md-height col-sm-height col-top text-column" style="">						
+					<div class="col-sm-6 col-lg-height col-md-height col-sm-height col-top text-column" style="background-color:<?PHP echo $bgColor;?>;">						
       					<div class="inside">
 							  <?PHP echo $text; ?>  								    
 						</div> <!-- /inside -->

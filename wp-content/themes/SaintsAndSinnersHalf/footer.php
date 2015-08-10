@@ -3,22 +3,32 @@
 					</div> <!-- /main-column -->
 				</div><!-- /row-height -->
 			</div><!-- /row -->
-			<div class="row">
-				<div class="col-md-12">
-						<!-- footer -->
-					<footer class="footer" role="contentinfo">
-		
-						<!-- copyright 
-						<p class="copyright">
-							&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'saintsandsinners'); ?>.
-						</p>
-						<!-- /copyright -->
-		
-					</footer>
-					<!-- /footer -->
+		</div><!-- /container -->
+		<footer class="footer">
+			<div class="container" >			
+				<div class="row">
+					<div class="col-md-3">
+						<div class="sponsers-text-wrapper">
+							<span class="sponsers-top">Our wonderful</span><br/>
+							<span class="sponsers-bottom">Sponsers</span>							 
+						</div>
+					</div>
+					<div class="col-md-9">	
+						<div class="row">
+							<?PHP while ( have_rows('sponser_logos', 'option') ) : the_row(); $image = get_sub_field('image'); $link = get_sub_field('link'); $name = get_sub_field('name')?>
+							<div class="col-md-3 sponser-logo">
+								<?PHP if (get_sub_field('link')!=''): ?>
+								<a href="<?PHP echo $link; ?>" title="<?PHP echo $name; ?>"><img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $name; ?>"></a>				
+								<?PHP else:?>								
+								<img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $name; ?>" title="<?PHP echo $name; ?>">							
+								<?PHP endif;?>
+							</div>
+							<?PHP endwhile; ?>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div><!-- /container -->
+		</footer>
 
 		<?php wp_footer(); ?>
 
