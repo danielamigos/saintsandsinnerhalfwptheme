@@ -292,9 +292,29 @@ ul.navbar-nav  > li > a > i{
 	color:#222222;
 	transition: all 0.3s ease 0s;
 }
-ul.dropdown-menu  > li > a > i{
-	display: none;
+.dropdown-menu > li > a > i{
+	color:#444444;
+	transition: all 0.3s ease 0s;
 }
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus{
+	color: #ffffff;
+	background-color: inherit;
+}
+
+.dropdown-menu>.active>a, 
+.dropdown-menu>.active>a:hover, 
+.dropdown-menu>.active>a:focus {
+    color: #ffffff;
+    text-decoration: none;
+    outline: 0;
+    background-color: inherit;
+}
+.dropdown-menu > li > a {
+	color:#9d9d9d ;
+}
+/*ul.dropdown-menu  > li > a > i{
+	display: none;
+}*/
 
 .white-dot > a:hover > i, 
 .white-dot.active > a > i
@@ -314,7 +334,12 @@ ul.dropdown-menu  > li > a > i{
 .purple-dot > a:hover > i, 
 .purple-dot.active > a > i
 {
-	color: #92278f ;
+	color: #652c90 ;
+}
+.dark-purple-dot > a:hover > i, 
+.dark-purple-dot.active > a > i
+{
+	color: #71137a ;
 }
 .aqua-dot > a:hover > i, 
 .aqua-dot.active > a > i
@@ -335,6 +360,21 @@ ul.dropdown-menu  > li > a > i{
 .blue-dot.active > a > i
 {
 	color: #25aae1 ;
+}
+.green-dot > a:hover > i, 
+.green-dot.active > a > i
+{
+	color:#18a370;
+}
+.yellow-dot > a:hover > i, 
+.yellow-dot.active > a > i
+{
+	color: #e5e210;
+}
+.brown-dot > a:hover > i, 
+.brown-dot.active > a > i
+{
+	color:#8e3d00;
 }
 /*------------------------------------*\
     SLIDES
@@ -405,8 +445,8 @@ ul.dropdown-menu  > li > a > i{
 	background-color:#58585a;
 	padding: 15px;	
 	font-family:'gotham_htflight';
-	font-size:12px;
-	line-height:13px;
+	font-size:14px;
+	line-height:15px;
 }
 
 /*------------------------------------*\
@@ -603,7 +643,7 @@ ul.dropdown-menu  > li > a > i{
 	.dropdown-menu>li>a
 	{
 		padding:10px 20px;
-		color:#ffffff;
+		/*color:#ffffff;*/
 	}
 	
 	.call-to-action a {
@@ -865,4 +905,16 @@ a img.aligncenter {
 	color: #ffffff;
 	font-size:20px;
 	font-weight: bold;
+}
+
+/*------------------------------------*\
+    CONTACT FORM 7 
+\*------------------------------------*/
+.wpcf7 input{
+	color:#000000;
+	
+}
+
+.wpcf7-submit{
+	color:#000000;
 }

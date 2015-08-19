@@ -66,7 +66,10 @@
 							<div class="countdown" data-date='<?PHP the_field('raceday_date','option'); ?>' >
 								<?PHP
 									date_default_timezone_set('America/Phoenix');
-									$racedate = strtotime(get_field('raceday_date','option').'T00:00:00-07:00')-mktime();								
+									$raceHour = get_field('start_hour','option');
+									$raceMinutes = get_field('start_minute','option');
+									
+									$racedate = strtotime(get_field('raceday_date','option').'T'.$raceHour.':'.$raceMinutes.':00-07:00')-mktime();								
 								    $dtF = new DateTime("@0");
 								    $dtT = new DateTime("@$racedate");
 									$dif = $dtF->diff($dtT);
