@@ -500,6 +500,21 @@ function saintsandsinners_theme_customizer( $wp_customize ) {
 		'section'  => 'saintsandsinners_logo_section',
 		'settings' => 'saintsandsinners_logo',
 	) ) );
+    
+    
+    $wp_customize->add_section( 'saintsandsinners_logo2_section' , array(
+		'title'       => __( 'Logo 2', 'saintsandsinners' ),
+		'priority'    => 30,
+		'description' => 'Upload a second logo to be used and pages different from the front page',
+	) );
+	
+	$wp_customize->add_setting( 'saintsandsinners_logo2' );
+	
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'saintsandsinners_logo2', array(
+		'label'    => __( 'Logo', 'saintsandsinners' ),
+		'section'  => 'saintsandsinners_logo2_section',
+		'settings' => 'saintsandsinners_logo2',
+	) ) );
 
 }
 add_action('customize_register', 'saintsandsinners_theme_customizer');
