@@ -196,6 +196,11 @@ input:focus {
 .navbar-inverse .navbar-nav>.active>a:focus{
 	background-color: inherit;
 }
+
+
+.navbar-inverse .navbar-nav>li>a{
+	text-align: center;
+}
 /*.navbar-inverse .navbar-nav > .orange-dot.active > a{
 	background-color: transparent;
 }
@@ -287,7 +292,12 @@ input:focus {
 /*------------------------------------*\
     MENU DOTS
 \*------------------------------------*/
-
+.nav>li>a{
+	padding: 10px 5px;
+}
+.navbar-inverse .navbar-nav>li>a{
+	white-space: nowrap;
+}
 ul.navbar-nav  > li > a > i{
 	color:#222222;
 	transition: all 0.3s ease 0s;
@@ -447,6 +457,25 @@ ul.navbar-nav  > li > a > i{
 	font-family:'gotham_htflight';
 	font-size:14px;
 	line-height:15px;
+}
+/*------------------------------------*\
+    IMAGE GALLERY
+\*------------------------------------*/
+.gallery-main-content
+{
+	color:#ffffff;
+	font-family: 'GothamLight-Regular';
+	font-size: 14px;   
+}
+.gallery-main-content .row
+{
+	margin:0;
+}
+
+.gallery-main-content .image-column
+{
+	overflow: hidden;
+	padding:0;
 }
 
 /*------------------------------------*\
@@ -621,6 +650,11 @@ ul.navbar-nav  > li > a > i{
 	    text-align:center;
 		float: none;
 	}
+	
+	.navbar-inverse .navbar-nav>li>a{
+		font-size: 12px;
+		text-align: left;
+	}
 	.dropdown:hover .dropdown-menu {
 		display: table;
 	}
@@ -712,6 +746,9 @@ ul.navbar-nav  > li > a > i{
 /* Large Devices, Wide Screens */
 @media only screen and (min-width:1110px) {
 	
+	.navbar-inverse .navbar-nav>li>a{
+		font-size: 14px;
+	}
 	.call-to-action a {
 		padding: 15px 25px;
 	} 
@@ -915,6 +952,10 @@ a img.aligncenter {
 	
 }
 
+button,
+html input[type="button"], 
+input[type="reset"], 
+input[type="submit"],
 .wpcf7-submit{
 	color:#000000;
 }

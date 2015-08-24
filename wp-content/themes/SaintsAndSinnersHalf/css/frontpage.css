@@ -3,9 +3,12 @@
 \*------------------------------------*/
 
 .what-where-when-why{
-	height:100px;
+	/*height:100px;*/
 	background-image: url('../img/frontpage-gradient.png');
-	position: absolute;
+	/*position: absolute;
+	background-color: transparent;*/
+	position: relative;
+	background-color:#ffffff;
 	width: 100%;
 	/*margin-left: -15px;
 	margin-top: 0;*/
@@ -14,11 +17,13 @@
 	color:#ffffff;
 	z-index: 10;
 	padding-top:15px;
+	padding-bottom:15px;
 }
 .what-where-when-why > div{
 	display: inline-block;
 	text-align: center;
-	width: 24%;
+	/*width: 24%;*/	
+	width: 49%;
 	vertical-align: top;
 	text-transform: uppercase;
 }
@@ -113,4 +118,27 @@
 	padding:0;
 	float:left;
 	position:relative;
+}
+
+@media only screen and (min-width:480px) {
+		
+	.what-where-when-why{
+		position: relative;
+		background-color:#ffffff;
+	}
+	.what-where-when-why > div{
+		width: 49%;
+	}
+}
+@media only screen and (min-width:768px) {
+	.what-where-when-why > div{
+		width: 24%;
+	}
+}
+
+@media only screen and (min-width:1110px) {	
+	.what-where-when-why{
+		position: absolute;
+		background-color: transparent;
+	}
 }

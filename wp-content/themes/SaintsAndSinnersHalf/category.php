@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 
-	<main role="main">
+		<div class="page-title-header" style="background-color:<?PHP the_field('page_title_background_color'); ?>">
+				<div class="page-title"><?php _e( 'Categories for ', 'saintsandsinners' ); single_cat_title(); ?></div>
+		</div>
+		<main role="main" class="page-main-content">
 		<!-- section -->
 		<section>
-
-			<h1><?php _e( 'Categories for ', 'saintsandsinners' ); single_cat_title(); ?></h1>
+ 
 
 			<?php get_template_part('loop'); ?>
 

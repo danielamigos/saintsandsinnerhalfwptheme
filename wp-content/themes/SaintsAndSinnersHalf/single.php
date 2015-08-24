@@ -1,6 +1,13 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<div class="page-title-header">
+			<div class="page-title"><?php the_title(); ?></div>
+			<?PHP if (function_exists(the_subtitle)): ?>
+			<div class="page-subtitle"><?php the_subtitle(); ?></div>
+			<?PHP endif;?>
+	</div>
+
+	<main role="main"  class="page-main-content">
 	<!-- section -->
 	<section>
 

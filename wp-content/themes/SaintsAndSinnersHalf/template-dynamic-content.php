@@ -43,23 +43,48 @@
 			</div><!-- /row -->
 								<?PHP	
 									endif;				
-					        elseif( get_row_layout() == 'image' ): 					
+					        elseif( get_row_layout() == 'image' ): 				
+					        	$columns = get_sub_field('columns');				
 					        	$image = get_sub_field('image');				
-					        	$link = get_sub_field('link');?>
-								<?PHP if($link==''):?>
-			<div class="row">
-				<div class="col-md-12 image-column">
-					<img src="<?PHP echo $image['url']; ?>" alt="">
-				</div>				
-			</div>
-								<?PHP else: ?>
-			<div class="row">
-				<div class="col-md-12 image-column">
-					<a href="<?PHP echo $link; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
-				</div>				
-			</div>
-								<?PHP
-									endif;
+					        	$link = get_sub_field('link');				
+					        	$image_2 = get_sub_field('image_2');				
+					        	$link_2 = get_sub_field('link_2');?>
+								<?PHP if($columns == "1"): ?>
+									<?PHP if($link==''):?>
+				<div class="row">
+					<div class="col-md-12 image-column">
+						<img src="<?PHP echo $image['url']; ?>" alt="">
+					</div>				
+				</div>
+									<?PHP else: ?>
+				<div class="row">
+					<div class="col-md-12 image-column">
+						<a href="<?PHP echo $link; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
+					</div>				
+				</div>
+									<?PHP endif; ?>
+								<?PHP else:?>				
+				<div class="row">
+									<?PHP if($link==''):?>
+					<div class="col-md-6 image-column">
+						<img src="<?PHP echo $image['url']; ?>" alt="">
+					</div>				
+									<?PHP else: ?>
+					<div class="col-md6 image-column">
+						<a href="<?PHP echo $link; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
+					</div>				
+									<?PHP endif; ?>				
+									<?PHP if($link_2==''):?>
+					<div class="col-md-6 image-column">
+						<img src="<?PHP echo $image_2['url']; ?>" alt="">
+					</div>				
+									<?PHP else: ?>
+					<div class="col-md-6 image-column">
+						<a href="<?PHP echo $link_2; ?>"><img src="<?PHP echo $image_2['url']; ?>" alt=""></a>
+					</div>		
+									<?PHP endif; ?>		
+				</div>
+								<?PHP endif;
 							elseif(get_row_layout() == 'text_and_image'):
 					        	$textPosition = get_sub_field('text_position');
 					        	$text = get_sub_field('text'); 

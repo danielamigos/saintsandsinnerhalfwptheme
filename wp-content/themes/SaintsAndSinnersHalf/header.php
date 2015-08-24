@@ -44,26 +44,37 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
+		<?PHP 
+			$isFrontPage = false;
+			if(basename(get_page_template()) == 'template-frontpage.php')
+				$isFrontPage = true;
+		?>
 		<!-- wrapper -->
 		<div class="container">
 			<div class="row">				
   				<div class="row-lg-height row-md-height row-sm-height">
 					<div class="col-sm-3 col-lg-height col-md-height col-sm-height col-top left-column">						
-      					<div class="inside">
-							<header class="header clear" role="banner">						
+      					<div class="inside">	
+							<header class="header clear" role="banner">												
 								<?php if ( get_theme_mod( 'saintsandsinners_logo' )): ?>
-									<div class='logo'>
+									<div class='logo <?PHP if(!$isFrontPage) echo 'hidden-xs'; ?>' >
 										<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr(get_bloginfo( 'name','display')); ?>' rel='home'>
 											<img src='<?php echo esc_url( get_theme_mod( 'saintsandsinners_logo' ) ); ?>' alt='<?php echo esc_attr(get_bloginfo('name','display')); ?>'>
 										</a>
 									</div>
-								<?php endif; ?>		
+								<?php endif; if(!$isFrontPage): ?>	
+									<div class='logo2 visible-xs-block' >
+										<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr(get_bloginfo( 'name','display')); ?>' rel='home'>
+											<img src='<?php echo esc_url( get_theme_mod( 'saintsandsinners_logo2' ) ); ?>' alt='<?php echo esc_attr(get_bloginfo('name','display')); ?>'>
+										</a>
+									</div>
+								<?PHP endif; ?>
+									
 							</header>
 							<div class="call-to-action">
 								<a href="<?PHP the_field('register_link','option') ?>" class="btn btn-default">Register Today</a>
 							</div>
-							<div class="countdown" data-date='<?PHP the_field('raceday_date','option'); ?>' >
+							<div class="countdown <?PHP if(!$isFrontPage) echo 'hidden-xs'; ?>" data-date='<?PHP the_field('raceday_date','option'); ?>' >
 								<?PHP
 									date_default_timezone_set('America/Phoenix');
 									$raceHour = get_field('start_hour','option');
@@ -100,10 +111,9 @@
 								$facebookLink = get_field('facebook_link','option');
 								$twitterLink = get_field('twitter_link','option');
 								$instagramLink = get_field('instagram_link','option');
-								$linkedinLink = get_field('linkedin_link','option');
-								
+								$linkedinLink = get_field('linkedin_link','option');	
 							?>
-							<div class="social-links">
+							<div class="social-links <?PHP if(!$isFrontPage) echo 'hidden-xs'; ?>">
 								Follow us on:
 								<span>
 								<?PHP if($facebookLink): ?> 
@@ -116,7 +126,7 @@
 									<a class="linkedin" href="<?PHP echo $linkedinLink; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/social-linkedin.png" alt="LinkedIn" ></a>
 								<?PHP endif; ?>
 								</span>
-							</div>													
+							</div>
 						</div> <!-- inside -->
 					</div> <!-- col-sm-3 col-lg-height col-md-height  left-column -->
 					<div class="col-sm-9 col-lg-height col-md-height col-sm-height col-top main-column">			

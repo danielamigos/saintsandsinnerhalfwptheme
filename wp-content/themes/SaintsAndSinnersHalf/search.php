@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<div class="page-title-header" style="background-color:<?PHP the_field('page_title_background_color'); ?>">
+			<div class="page-title"><?php echo sprintf( __( '%s Search Results for ', 'saintsandsinners' ), $wp_query->found_posts ); echo get_search_query(); ?></div>
+	</div>
+	<main role="main" class="page-main-content">
 		<!-- section -->
 		<section>
-
-			<h1><?php echo sprintf( __( '%s Search Results for ', 'saintsandsinners' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
 
 			<?php get_template_part('loop'); ?>
 

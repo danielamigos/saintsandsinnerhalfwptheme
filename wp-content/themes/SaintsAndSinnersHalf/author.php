@@ -1,12 +1,14 @@
 <?php get_header(); ?>
 
-	<main role="main">
+		<div class="page-title-header" style="background-color:<?PHP the_field('page_title_background_color'); ?>">
+				<div class="page-title"><?php _e( 'Author Archives for ', 'saintsandsinners' ); echo get_the_author(); ?></div>
+		</div>
+		<main role="main" class="page-main-content">
+			
 		<!-- section -->
 		<section>
 
 		<?php if (have_posts()): the_post(); ?>
-
-			<h1><?php _e( 'Author Archives for ', 'saintsandsinners' ); echo get_the_author(); ?></h1>
 
 		<?php if ( get_the_author_meta('description')) : ?>
 
