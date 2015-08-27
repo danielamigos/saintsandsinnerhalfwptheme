@@ -950,6 +950,7 @@ a img.aligncenter {
 \*------------------------------------*/
 .wpcf7 input{
 	color:#000000;
+	font-weight: bold;
 	
 }
 
@@ -957,6 +958,8 @@ button,
 html input[type="button"], 
 input[type="reset"], 
 input[type="submit"],
+textarea,
 .wpcf7-submit{
 	color:#000000;
+	font-weight: bold;
 }

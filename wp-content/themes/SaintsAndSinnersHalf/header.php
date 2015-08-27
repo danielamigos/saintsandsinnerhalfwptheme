@@ -72,7 +72,7 @@
 									
 							</header>
 							<div class="call-to-action">
-								<a href="<?PHP the_field('register_link','option') ?>" class="btn btn-default">Register Today</a>
+								<a href="<?PHP the_field('register_link','option') ?>" class="btn btn-default" target="_blank">Register Today</a>
 							</div>
 							<div class="countdown <?PHP if(!$isFrontPage) echo 'hidden-xs'; ?>" data-date='<?PHP the_field('raceday_date','option'); ?>' >
 								<?PHP
@@ -117,13 +117,13 @@
 								Follow us on:
 								<span>
 								<?PHP if($facebookLink): ?> 
-									<a class="facebook" href="<?PHP echo $facebookLink; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/social-facebook.png" alt="Facebook" ></a>
+									<a class="facebook" href="<?PHP echo $facebookLink; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social-facebook.png" alt="Facebook" ></a>
 								<?PHP endif; if ($twitterLink): ?>
-									<a class="twitter" href="<?PHP echo $twitterLink; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/social-twitter.png" alt="Twitter" ></a>
+									<a class="twitter" href="<?PHP echo $twitterLink; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social-twitter.png" alt="Twitter" ></a>
 								<?PHP endif; if ($instagramLink): ?>
-									<a class="instagram" href="<?PHP echo $instagramLink; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/social-instagram.png" alt="Instagram" ></a>
+									<a class="instagram" href="<?PHP echo $instagramLink; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social-instagram.png" alt="Instagram" ></a>
 								<?PHP endif; if ($linkedinLink): ?>
-									<a class="linkedin" href="<?PHP echo $linkedinLink; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/social-linkedin.png" alt="LinkedIn" ></a>
+									<a class="linkedin" href="<?PHP echo $linkedinLink; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social-linkedin.png" alt="LinkedIn" ></a>
 								<?PHP endif; ?>
 								</span>
 							</div>
