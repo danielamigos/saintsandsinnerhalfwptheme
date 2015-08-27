@@ -1,24 +1,26 @@
 <?php /* Template Name: Front Page Template */ get_header(); ?>
 	<main role="main">
 		<!-- section -->
-		<div class="what-where-when-why">
-			<div>
-				<div class="question">What:</div>
-				<div class="answer">1/2 Marathon, Relay, Fun Run</div>
+		<a href="http://saintsandsinnershalf.com/faq/">
+			<div class="what-where-when-why">
+				<div>
+					<div class="question">What:</div>
+					<div class="answer">1/2 Marathon, Relay, Fun Run</div>
+				</div>
+				<div>
+					<div class="question">When:</div>
+					<div class="answer">September 26th,2015</div>
+				</div>
+				<div>
+					<div class="question">Where:</div>
+					<div class="answer">Lake Mead National Park, Nv.</div>
+				</div>
+				<div>
+					<div class="question">Why:</div>
+					<div class="answer">It's for a great cause</div>
+				</div>
 			</div>
-			<div>
-				<div class="question">When:</div>
-				<div class="answer">September 26th,2015</div>
-			</div>
-			<div>
-				<div class="question">Where:</div>
-				<div class="answer">Lake Mead National Park, Nv.</div>
-			</div>
-			<div>
-				<div class="question">Why:</div>
-				<div class="answer">It's for a great cause</div>
-			</div>
-		</div>
+		</a>
 		<section>		
 			<?PHP $slides = '';
 				  $numberOfSlides = count( get_field( 'flexible_content_slides', 'option' ) );
