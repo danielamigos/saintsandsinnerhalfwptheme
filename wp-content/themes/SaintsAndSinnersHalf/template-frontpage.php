@@ -43,19 +43,20 @@
 						<a class="next-slide" href='#'><img src='<?php echo get_template_directory_uri(); ?>/img/arrow-right.png' alt='Next' ></a>
 					</div>				
 			<?PHP 		while ( have_rows('flexible_content_slides', 'option') ) : the_row(); 
-							if( get_row_layout() == 'image' ):$image = get_sub_field('image'); $link = get_sub_field('link');?>				
+							if( get_row_layout() == 'image' ):$image = get_sub_field('image'); $link = get_sub_field('link'); 
+					        	$link_target = (get_sub_field('link_target')=='New Tab')?'_blank':'_self';?>				
 					<div class="catapult-slide">
 					<div class="slideshow-gradient">
 						<div class="container" style="width:100%;height:100%;position:relative;">
 							<?PHP if($link != ""): ?> 
-							<a href="<?PHP echo $link; ?>">
+							<a href="<?PHP echo $link; ?>"  target="<?PHP echo $link_target; ?>">
 						        <span class="link-spanner" style=" position:absolute;width:100%;height:100%;top:0;left: 0;z-index: 1;"></span>
 						    </a>
 							<?PHP endif; ?>
 						</div>
 					</div>
 					<?PHP if($link!=''):?> 
-						<a href='<?PHP echo $link; ?>'><img class="slide-image"  src="<?php echo $image['url']; ?>"  data-description="<?PHP the_sub_field('description'); ?>" data-link=""></a>
+						<a href='<?PHP echo $link; ?>'  target="<?PHP echo $link_target; ?>"><img class="slide-image"  src="<?php echo $image['url']; ?>"  data-description="<?PHP the_sub_field('description'); ?>" data-link=""></a>
 					<?PHP else: ?>
 						<img class="slide-image" src="<?php echo $image['url']; ?>" data-description="<?PHP the_sub_field('description'); ?>" data-link="">
 					<?PHP endif; ?>

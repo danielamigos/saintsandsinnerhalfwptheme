@@ -43,12 +43,14 @@
 			</div><!-- /row -->
 								<?PHP	
 									endif;				
-					        elseif( get_row_layout() == 'image' ): 				
-					        	$columns = get_sub_field('columns');				
-					        	$image = get_sub_field('image');				
-					        	$link = get_sub_field('link');				
-					        	$image_2 = get_sub_field('image_2');				
-					        	$link_2 = get_sub_field('link_2');?>
+					        elseif( get_row_layout() == 'image' ):
+					        	$columns = get_sub_field('columns');
+					        	$image = get_sub_field('image');
+					        	$link = get_sub_field('link');
+					        	$link_target = (get_sub_field('link_target')=='New Tab')?'_blank':'_self';
+					        	$image_2 = get_sub_field('image_2');
+					        	$link_2 = get_sub_field('link_2');
+					        	$link_2_target = (get_sub_field('link_2_target')=='New Tab')?'_blank':'_self';?>
 								<?PHP if($columns == "1"): ?>
 									<?PHP if($link==''):?>
 				<div class="row">
@@ -59,7 +61,7 @@
 									<?PHP else: ?>
 				<div class="row">
 					<div class="col-md-12 image-column">
-						<a href="<?PHP echo $link; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
+						<a href="<?PHP echo $link; ?>" target="<?PHP echo $link_target; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
 					</div>				
 				</div>
 									<?PHP endif; ?>
@@ -71,7 +73,7 @@
 					</div>				
 									<?PHP else: ?>
 					<div class="col-md6 image-column">
-						<a href="<?PHP echo $link; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
+						<a href="<?PHP echo $link; ?>"  target="<?PHP echo $link_target; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
 					</div>				
 									<?PHP endif; ?>				
 									<?PHP if($link_2==''):?>
@@ -80,7 +82,7 @@
 					</div>				
 									<?PHP else: ?>
 					<div class="col-md-6 image-column">
-						<a href="<?PHP echo $link_2; ?>"><img src="<?PHP echo $image_2['url']; ?>" alt=""></a>
+						<a href="<?PHP echo $link_2; ?>"  target="<?PHP echo $link_2_target; ?>"><img src="<?PHP echo $image_2['url']; ?>" alt=""></a>
 					</div>		
 									<?PHP endif; ?>		
 				</div>
@@ -102,11 +104,12 @@
       					<div class="inside">
 							  <?PHP while ( have_rows('image_repeater') ) : the_row();
 					        	$image = get_sub_field('image');
-					        	$link = get_sub_field('image_link'); ?>
+					        	$link = get_sub_field('image_link'); 
+					        	$link_target = (get_sub_field('link_target')=='New Tab')?'_blank':'_self';?>
 								<?PHP if($link==''):?>							  						    
 							<img src="<?PHP echo $image['url']; ?>" alt=""> 
 								<?PHP else: ?>
-							<a href="<?PHP echo $link; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
+							<a href="<?PHP echo $link; ?>"  target="<?PHP echo $link_target; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
 								<?PHP endif;
 									endwhile; ?>
 						</div> <!-- /inside -->
@@ -124,7 +127,7 @@
 								<?PHP if($link==''):?>							  						    
 							<img src="<?PHP echo $image['url']; ?>" alt=""> 
 								<?PHP else: ?>
-							<a href="<?PHP echo $link; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
+							<a href="<?PHP echo $link; ?>"  target="<?PHP echo $link_target; ?>"><img src="<?PHP echo $image['url']; ?>" alt=""></a>
 								<?PHP endif; ?>
 						</div> <!-- /inside -->
 					</div> <!-- /main-column -->

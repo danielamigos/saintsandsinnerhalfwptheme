@@ -27,9 +27,9 @@
 	<body <?php body_class(); ?>>
 	<?php 
 	  // Fix menu overlap bug..
-	  if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;">&nbsp;</div>'; 
+	  //if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;">&nbsp;</div>'; 
 	?>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="<?php if ( is_admin_bar_showing() ) echo 'top:32px;';?>">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -72,7 +72,8 @@
 									
 							</header>
 							<div class="call-to-action">
-								<a href="<?PHP the_field('register_link','option') ?>" class="btn btn-default" target="_blank">Register Today</a>
+								<?php $link_target = (get_field('link_target','option')=='New Tab')?'_blank':'_self'; ?>
+								<a href="<?PHP the_field('register_link','option') ?>" class="btn btn-default" target="<?PHP echo $link_target; ?>">Register Today</a>
 							</div>
 							<div class="countdown <?PHP if(!$isFrontPage) echo 'hidden-xs'; ?>" data-date='<?PHP the_field('raceday_date','option'); ?>' >
 								<?PHP

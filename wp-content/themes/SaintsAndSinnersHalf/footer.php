@@ -18,7 +18,7 @@
 							<?PHP while ( have_rows('sponser_logos', 'option') ) : the_row(); $image = get_sub_field('image'); $link = get_sub_field('link'); $name = get_sub_field('name')?>
 							<div class="col-md-3 sponser-logo">
 								<?PHP if (get_sub_field('link')!=''): ?>
-								<a href="<?PHP echo $link; ?>" title="<?PHP echo $name; ?>"><img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $name; ?>"></a>				
+								<a href="<?PHP echo $link; ?>" title="<?PHP echo $name; ?>" target="_blank"><img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $name; ?>"></a>				
 								<?PHP else:?>								
 								<img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $name; ?>" title="<?PHP echo $name; ?>">							
 								<?PHP endif;?>

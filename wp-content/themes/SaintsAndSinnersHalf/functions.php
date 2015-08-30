@@ -294,8 +294,13 @@ function saintssinners_blank_view_article($more)
 // Remove Admin bar
 function remove_admin_bar()
 {
-    return false;
+	if (!current_user_can('administrator') && !is_admin()) 
+	{
+		return false;	
+	}
+	return true;
 }
+
 
 // Remove 'text/css' from our enqueued stylesheet
 function saintssinners_style_remove($tag)
@@ -600,6 +605,14 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
 	));	
 }
+//5. Remove the plugin update notificaction     
+function stop_acf_update_notifications( $value ) {
+    $path = get_stylesheet_directory() . '/acf/acf.php';
+    $path = str_replace ('\\','/', $path); //fixes window directory issue
+    unset( $value->response[$path] );
+	return $value;
+}
+add_filter( 'site_transient_update_plugins', 'stop_acf_update_notifications', 11 );
 
 require_once('wp_bootstrap_navwalker.php');
 
