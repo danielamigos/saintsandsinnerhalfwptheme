@@ -9,7 +9,7 @@
 				</div>
 				<div>
 					<div class="question">When:</div>
-					<div class="answer">September 26th,2015</div>
+					<div class="answer">Feburary 20th, 2016</div>
 				</div>
 				<div>
 					<div class="question">Where:</div>
@@ -43,10 +43,10 @@
 						<a class="next-slide" href='#'><img src='<?php echo get_template_directory_uri(); ?>/img/arrow-right.png' alt='Next' ></a>
 					</div>				
 			<?PHP 		while ( have_rows('flexible_content_slides', 'option') ) : the_row(); 
-							if( get_row_layout() == 'image' ):$image = get_sub_field('image'); $link = get_sub_field('link'); 
+							if( get_row_layout() == 'image' ):$image = get_sub_field('image'); $link = get_sub_field('link'); $gradient = get_sub_field('use_gradient');
 					        	$link_target = (get_sub_field('link_target')=='New Tab')?'_blank':'_self';?>				
 					<div class="catapult-slide">
-					<div class="slideshow-gradient">
+					<div class="slideshow-<?PHP if($gradient == FALSE) echo "no-"; ?>gradient">
 						<div class="container" style="width:100%;height:100%;position:relative;">
 							<?PHP if($link != ""): ?> 
 							<a href="<?PHP echo $link; ?>"  target="<?PHP echo $link_target; ?>">

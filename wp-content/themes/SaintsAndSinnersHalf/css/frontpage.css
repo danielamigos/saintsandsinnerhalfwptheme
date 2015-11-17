@@ -53,6 +53,16 @@
 	position: absolute;
 	/*z-index:1;*/
 }
+.slideshow-no-gradient
+{
+	width: 100%;
+	height: 100%;
+	/*background-image: url(../img/gradient-slideshow-01.png);
+	background-repeat: repeat-x;
+	background-position: bottom;*/	
+	position: absolute;
+	/*z-index:1;*/
+}
 .slideshow-controls
 {
 	position:absolute;
